@@ -48,7 +48,7 @@ This solution transforms compliance into a strategic advantage by using predicti
 - Deployed on Vercel
 
 ## 🔧 Local Setup
-
+- Open index.html in browser
 ```bash
 https://fdi-compliance-aid.vercel.app
-# Open index.html in browser
+
