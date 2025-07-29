@@ -2,7 +2,7 @@
 AI-powered web portal to monitor FDI compliance, predict regulatory changes, and avoid penalties.
 
 ## Walmart FDI Compliance Portal
-This is a web application developed for the Walmart Hackathon 2025. It helps Walmart proactively monitor and stay compliant with India's FDI and regulatory requirements, avoiding penalties and operational risks.This project is an AI-driven compliance monitoring portal developed during the Walmart Hackathon 2025. It helps Walmart stay proactive in navigating India's complex FDI and e-commerce regulations by predicting policy changes, assessing business impact, and automating compliance actions. The platform integrates advanced analytics, real-time alerts, and a user-friendly dashboard to reduce regulatory risks and ensure continuous legal alignment.
+This is a web application developed for the Walmart Hackathon 2025. It helps Walmart proactively monitor and stay compliant with India's FDI and regulatory requirements, avoiding penalties and operational risks. This project is an AI-driven compliance monitoring portal developed during the Walmart Hackathon 2025. It helps Walmart stay proactive in navigating India's complex FDI and e-commerce regulations by predicting policy changes, assessing business impact, and automating compliance actions. The platform integrates advanced analytics, real-time alerts, and a user-friendly dashboard to reduce regulatory risks and ensure continuous legal alignment.
 
 
 ## 📄 **Project Description**
