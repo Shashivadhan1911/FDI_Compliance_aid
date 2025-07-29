@@ -2128,15 +2128,14 @@
             { id: 'EMP001', name: 'Alice Johnson', department: 'HR', role: 'Manager', status: 'Active' },
             { id: 'EMP002', name: 'Bob Williams', department: 'Finance', role: 'Analyst', status: 'Active' },
             { id: 'EMP003', name: 'Charlie Brown', department: 'Operations', role: 'Supervisor', status: 'Inactive' },
-            { id: 'EMP1911', name: 'Shashivadhan Cheepiri', department: 'Legal', role: 'Counsel', status: 'Active' },
+            { id: 'EMP1911', name: 'Shashivadhan Cheepiri', department: 'AI & Regulatory Tech', role: 'AI Compliance Lead', status: 'Active' },
             { id: 'EMP2256', name: 'Siri', department: 'AI & Regulatory Tech', role: 'AI Compliance Lead', status: 'Active' }
         ];
 
         // Simulated user passwords (for client-side persistence)
         let userPasswords = JSON.parse(localStorage.getItem('userPasswords')) || {
-            'EMP2256': 'securepass'
-        }||{
-            'EMP1911': 'shashivadhan'
+            'EMP2256': 'securepass',
+            'EMP1911': 'shashi1911'
         };
 
         let chart = null;
