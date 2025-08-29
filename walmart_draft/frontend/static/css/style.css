@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #0071ce; /* Walmart blue */
+    --secondary-color: #ffc220; /* Walmart yellow */
+    --compliant-color: #4CAF50;
+    --noncompliant-color: #F44336;
+    --warning-color: #FFC107;
+    --dark-text: #333;
+    --light-text: #f5f5f5;
+    --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: var(--dark-text);
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+.alert-badge {
+    background-color: var(--noncompliant-color);
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.status-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.status-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.status-indicator {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.compliant {
+    background-color: var(--compliant-color);
+    color: white;
+}
+
+.noncompliant {
+    background-color: var(--noncompliant-color);
+    color: white;
+}
+
+.warning {
+    background-color: var(--warning-color);
+    color: var(--dark-text);
+}
+
+.regulatory-changes, .predictive-insights, .settings-panel {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-top: 20px;
+}
+
+.changes-list {
+    margin-top: 15px;
+}
+
+.change-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.change-item:last-child {
+    border-bottom: none;
+}
+
+.change-item h3 {
+    margin: 0 0 5px 0;
+}
+
+.change-item .change-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.change-item .change-impact {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.high-impact {
+    background-color: #ffebee;
+    color: var(--noncompliant-color);
+}
+
+.medium-impact {
+    background-color: #fff8e1;
+    color: #FF8F00;
+}
+
+.settings-panel {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.setting {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings-panel {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}

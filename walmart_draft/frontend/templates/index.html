@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Compliance AI Dashboard</title>
+    <link rel="stylesheet" href="/walmart/frontend/static/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>AI-Powered Regulatory Compliance</h1>
+            <div class="header-controls">
+                <button id="refresh-btn">Refresh Data</button>
+                <div class="alert-badge" id="alert-badge">0</div>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="compliance-status">
+                <h2>Current Compliance Status</h2>
+                <div class="status-cards">
+                    <div class="status-card" id="fdi-status">
+                        <h3>FDI Regulations</h3>
+                        <div class="status-indicator compliant">Compliant</div>
+                        <div class="last-updated">Last updated: <span id="fdi-update-time">Loading...</span></div>
+                    </div>
+                    <!-- More status cards would go here -->
+                </div>
+            </div>
+            
+            <div class="regulatory-changes">
+                <h2>Recent Regulatory Changes</h2>
+                <div class="changes-list" id="changes-list">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+            
+            <div class="predictive-insights">
+                <h2>Predictive Insights</h2>
+                <div class="insight" id="prediction-insight">
+                    <!-- AI predictions will appear here -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="settings-panel">
+            <h2>System Configuration</h2>
+            <div class="setting">
+                <label for="scan-frequency">Regulatory Scan Frequency:</label>
+                <select id="scan-frequency">
+                    <option value="1">Hourly</option>
+                    <option value="6">Every 6 Hours</option>
+                    <option value="24" selected>Daily</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="fdi-countries">FDI Monitoring Countries:</label>
+                <input type="text" id="fdi-countries" placeholder="US,CA,MX,IN,UK...">
+            </div>
+            <button id="save-settings">Save Settings</button>
+        </div>
+    </div>
+    
+    <script src="/walmart/frontend/static/js/main.js"></script>
+</body>
+</html>
