@@ -1,0 +1,1160 @@
+/* Walmart Themed CSS for Compliance Dashboard */
+/* Using Tailwind CSS for utility classes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f4f8;
+    /* Lighter background for the overall page */
+    color: #1a2e44;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a2e44;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    /* Make it a flex container */
+    flex-direction: column;
+    /* Stack content vertically */
+}
+
+.section:hover {
+    transform: translateY(-3px);
+}
+
+.section-content-wrapper {
+    flex-grow: 1;
+    /* Allow content to grow */
+}
+
+.section-footer-buttons {
+    margin-top: 20px;
+    align-self: flex-end;
+    /* Align buttons to the right within the flex column */
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .grid-cols-lg-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-md-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+.status-card {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: #334155;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.status-card span {
+    font-weight: 700;
+    color: #1a2e44;
+}
+
+.alert-item {
+    background: #ffebeb;
+    padding: 12px;
+    border-left: 4px solid #dc2626;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: #b91c1c;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.alert-item .alert-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.alert-item i {
+    margin-right: 10px;
+    color: #dc2626;
+}
+
+.compliance-update-item {
+    background: #ebf9eb;
+    padding: 12px;
+    border-left: 4px solid #22c55e;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #16a34a;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.button-primary {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75;
+}
+
+.button-secondary {
+    @apply bg-gray-200 text-gray-800 px-6 py-3 rounded-xl shadow-md hover:bg-gray-300 transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75;
+}
+
+.button-danger {
+    @apply bg-red-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-red-700 transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75;
+}
+
+.button-small {
+    @apply text-sm px-4 py-2 rounded-lg shadow-sm transition duration-200 ease-in-out;
+}
+
+.button-action {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.checkbox-container label {
+    @apply flex items-center cursor-pointer text-gray-700 text-base;
+}
+
+.checkbox-container input[type="checkbox"] {
+    @apply mr-2 h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.chart-container {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+canvas {
+    max-height: 350px !important;
+    width: 100% !important;
+}
+
+.system-health-status {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #22c55e;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sub-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Base z-index for modals */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.notification-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1050; /* Higher z-index to appear above navigation */
+    padding: 10px;
+}
+
+.notification-dropdown.active {
+    display: block;
+}
+
+.notification-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item.unread {
+    background-color: #e0f2fe;
+    font-weight: 500;
+}
+
+.notification-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.footer-social-icon {
+    @apply text-white hover:text-blue-400 transition-colors duration-200;
+}
+
+/* Specific styles for the sidebar and main content layout */
+.main-layout {
+    display: flex;
+    flex-grow: 1;
+    /* Allow it to take available vertical space */
+}
+
+.sidebar {
+    width: 280px;
+    /* Wider sidebar */
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    /* Enable scrolling for sidebar if content overflows */
+}
+
+.main-dashboard-content {
+    flex-grow: 1;
+    padding: 24px;
+    background-color: #f0f4f8;
+    overflow-y: auto;
+    /* Enable scrolling for main content */
+}
+
+.sidebar-nav-item {
+    @apply flex items-center px-4 py-3 rounded-lg text-gray-700 font-medium hover:bg-blue-50 hover:text-blue-700 transition duration-200 ease-in-out;
+}
+
+.sidebar-nav-item.active {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.login-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.login-button {
+    @apply w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200;
+}
+
+/* Login Screen Styles */
+.login-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0071dc, #0056a3);
+    /* Walmart blue gradient */
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.login-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    color: #1a2e44;
+    animation: slideInUp 0.7s ease-out;
+}
+
+.login-card h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0071dc;
+}
+
+.login-card p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.login-card label {
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.login-card input {
+    margin-bottom: 20px;
+}
+
+.login-card .login-button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    position: relative;
+    /* For button pulse animation */
+    overflow: hidden;
+}
+
+/* Button pulse animation */
+.login-card .login-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.login-card .login-button:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Password Input Container - No Eye Icon */
+.password-input-container input {
+    padding-right: 12px; /* Adjusted padding as no eye icon */
+    margin-bottom: 0;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1020;
+}
+
+/* Styling for the 'W' logo SVG */
+.w-logo-svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 1.5rem; /* Increased space from text */
+    flex-shrink: 0;
+}
+.w-logo-svg path {
+    fill: #0071dc; /* Walmart blue */
+}
+
+
+/* Secondary Nav Bar */
+.secondary-nav {
+    background-color: #0071dc;
+    /* Walmart blue */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
+    gap: 20px;
+    /* Space between nav items */
+    z-index: 1010; /* Below top nav, above content */
+}
+
+.secondary-nav-item {
+    color: white;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    /* Prevent wrapping within a nav item */
+    position: relative;
+    /* For tooltip */
+}
+
+.secondary-nav-item:hover {
+    background-color: #0056a3;
+    /* Darker blue on hover */
+}
+
+.secondary-nav-item.active {
+    background-color: #0056a3;
+}
+
+/* Tooltip for secondary nav items */
+.secondary-nav-item .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Position above the text */
+    left: 50%;
+    margin-left: -100px;
+    /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    white-space: normal;
+    /* Allow text to wrap */
+}
+
+.secondary-nav-item .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.secondary-nav-item:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* User Icon */
+.user-icon-container {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0f2fe;
+    border: 2px solid #60a5fa;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+}
+
+.user-icon-container:hover {
+    background-color: #cceeff;
+}
+
+.user-icon-container i {
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    z-index: 1050; /* Higher z-index to appear above navigation */
+    padding: 10px;
+}
+
+.user-dropdown.active {
+    display: block;
+}
+
+.user-dropdown p {
+    padding: 5px 0;
+    font-size: 0.9rem;
+    color: #334155;
+    border-bottom: 1px solid #eee;
+}
+
+.user-dropdown p:last-child {
+    border-bottom: none;
+}
+
+/* Search Results Section */
+#searchResultsSection {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 20px;
+    display: none;
+    /* Hidden by default */
+}
+
+#searchResultsContent .search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#searchResultsContent .search-result-item:last-child {
+    border-bottom: none;
+}
+
+#searchResultsContent .search-result-item .type {
+    font-weight: 600;
+    color: #0071dc;
+    margin-right: 8px;
+}
+
+#searchResultsContent .no-results {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+
+/* Search Recommendations */
+.search-recommendations {
+    position: absolute;
+    top: 100%;
+    /* Position below the search bar */
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Ensure it's above other content */
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    /* Hidden by default */
+}
+
+.search-recommendations.active {
+    display: block;
+}
+
+.search-recommendations-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #334155;
+    border-bottom: 1px solid #f0f4f8;
+}
+
+.search-recommendations-item:hover {
+    background-color: #f0f4f8;
+}
+
+.search-recommendations-item:last-child {
+    border-bottom: none;
+}
+
+/* Highlighted search term */
+.highlight {
+    background-color: #fffacd;
+    /* Light yellow background */
+    font-weight: bold;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+/* Landing Screen Styles */
+.landing-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0071dc, #0056a3);
+    /* Walmart blue gradient */
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.landing-content {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px;
+    color: #1a2e44;
+    animation: slideInUp 0.7s ease-out;
+}
+
+.landing-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0071dc;
+}
+
+.landing-content p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.landing-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.landing-section h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0071dc;
+    margin-bottom: 15px;
+}
+
+.landing-section .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #334155;
+}
+
+.landing-section .icon-text i {
+    font-size: 1.5rem;
+    color: #22c55e;
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+.landing-button {
+    @apply bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75 mt-8 text-lg font-semibold;
+}
+
+/* Flow Bar */
+.flow-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0f2fe;
+    /* Light blue background */
+    padding: 15px 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+    /* Allow horizontal scrolling on small screens */
+    white-space: nowrap;
+    /* Prevent wrapping of items */
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    padding: 0 10px;
+}
+
+.flow-step .step-number {
+    background-color: #0071dc;
+    /* Walmart blue */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.flow-step .step-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a2e44;
+}
+
+.flow-arrow {
+    color: #0071dc;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+@media (max-width: 768px) {
+    .flow-bar {
+        justify-content: flex-start;
+        /* Align to start for scrolling */
+    }
+
+    .flow-arrow {
+        font-size: 1.2rem;
+        margin: 0 5px;
+    }
+
+    .flow-step .step-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Risk Heatmap Styling */
+.heatmap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+    padding: 10px 12px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.heatmap-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.risk-low {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* Green */
+.risk-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* Yellow */
+.risk-high {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Red */
+
+/* AI Module Pulse/Confidence */
+.ai-module-status-line {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+    margin-top: 8px;
+}
+
+.ai-module-status-line .pulse-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+.pulse-green {
+    background-color: #22c55e;
+}
+
+.pulse-blue {
+    background-color: #3b82f6;
+}
+
+.pulse-orange {
+    background-color: #f97316;
+}
+
+.pulse-red {
+    background-color: #ef4444;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+}
+
+/* Legal Review Queue */
+.review-item {
+    background: #f0f9ff;
+    /* Light blue background */
+    padding: 12px;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #1e40af;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.review-item .status-tag {
+    @apply px-2 py-1 rounded-full text-xs font-semibold mt-2 self-end;
+}
+
+.status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-resolved {
+    background-color: #dcfce7; /* bg-green-100 */
+    color: #166534; /* text-green-800 */
+}
+
+.status-escalated {
+    background-color: #fee2e2; /* bg-red-100 */
+    color: #991b1b; /* text-red-800 */
+}
+
+/* Regulatory Logos in Footer */
+.regulatory-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Ensure logos wrap */
+}
+
+.regulatory-logos img {
+    height: 30px;
+    filter: grayscale(100%);
+    /* Grayscale effect */
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.regulatory-logos img:hover {
+    opacity: 1;
+}
+
+/* Smart Suggestion */
+.smart-suggestion {
+    background-color: #e0f2fe;
+    /* Light blue */
+    border-left: 4px solid #3b82f6;
+    /* Blue border */
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #1e40af;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    max-width: 350px;
+    animation: slideInRight 0.5s ease-out forwards, fadeOut 0.5s ease-in 4.5s forwards;
+    opacity: 0;
+}
+
+.toast.success {
+    border-left: 4px solid #22c55e;
+}
+
+.toast.info {
+    border-left: 4px solid #3b82f6;
+}
+
+.toast.warning {
+    border-left: 44px solid #f97316;
+}
+
+.toast.error {
+    border-left: 4px solid #ef4444;
+}
+
+.toast-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.toast.success .toast-icon {
+    color: #22c55e;
+}
+
+.toast.info .toast-icon {
+    color: #3b82f6;
+}
+
+.toast.warning .toast-icon {
+    color: #f97316;
+}
+
+.toast.error .toast-icon {
+    color: #ef4444;
+}
+
+.toast-content {
+    flex-grow: 1;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #9ca3af;
+    margin-left: 10px;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
